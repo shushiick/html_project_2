@@ -1,0 +1,156 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Моя киноколлекция</title>
+
+
+    <style>
+        /* Общие стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #242222;
+            color: #adadad;
+            margin: 0;    /* убирает станд отступ */
+            padding: 0;    /* убирает отступ от границ элемента */ 
+        }
+        
+        header {
+            background: linear-gradient(90deg, #631010, #627794); /* градиент */ 
+            color: white; /* цвет текста */ 
+            justify-content: center;
+            text-align: center;
+            padding: 20px 0;       /* отступ от границ элемента */
+	}
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;   /* увеличивает шрифт */
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Карточки фильмов */
+        /* стиль галереи */
+        .movie-gallery { 
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+	    padding: 20px; /* Отступы внутри галереи */
+	    margin: 0 auto; /* Центрирование всего контейнера */
+	    max-width: 1200px; /* Ограничение максимальной ширины */
+        }
+
+        /* стиль карточек */
+        .movie-card {
+            background-color: #141313;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 280px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        /* анимация при наведении */
+        .movie-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* постер фильма, обрезает картинку по размеру */
+        .movie-poster {
+            width: 100%; 
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* описание фильма, отступы */
+        .movie-info {
+            padding: 15px;
+        }
+        
+        /* стиль названий фильмов */
+        .movie-title {
+            font-size: 1.2em;
+            margin: 0 0 10px 0;
+            color: #631010;
+        }
+        
+        /* рейтинг */
+        .movie-rating {
+            color: #d99e3f;
+            font-weight: bold;
+        }
+
+	a {
+            color: inherit; /* Наследует цвет текста родителя */
+            text-decoration: none; /* Убирает подчеркивание */
+	}
+    
+	a:hover {
+            color: #d99e3f;	/* Цвет при наведении (золотистый) */
+    }
+        
+        footer {
+background: linear-gradient(90deg, #627794, #631010); /* градиент */ 
+            color: white; /* цвет текста */ 
+            justify-content: center;
+            text-align: center;
+            padding: 20px 0;       /* отступ от границ элемента */
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🍿 Моя киноколлекция</h1>
+        <p>Здесь собраны фильмы и сериалы, которые я обожаю</p>
+    </header>
+    
+    <div class="container">
+        <div class="movie-gallery">
+            <!-- Карточка 1 -->
+            <div class="movie-card">
+		<a href="scream-queens.html" >
+                <img src="orig.png" alt="Королевы крика" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">Королевы крика</h3>
+                    <p>Сериал о маньяке в маске Красного Дьявола, терроризирующем студенток элитного клуба в кампусе Уоллеса.</p>
+                    <p class="movie-rating">★ ★ ★ ★ ★</p>
+                </div>
+		</a>
+            </div>
+            
+            <!-- Карточка 2 -->
+            <div class="movie-card">
+		<a href="stranger-things.html">
+                <img src="osd.png" alt="Очень странные дела" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">Очень странные дела</h3>
+                    <p>1980-е, пропавший мальчик и таинственные эксперименты.</p>
+                    <p class="movie-rating">★ ★ ★ ★ ☆</p>
+                </div>
+		</a>
+            </div>
+            
+            <!-- Карточка 3 -->
+            <div class="movie-card">
+		<a href="major-grom.html">
+                <img src="mg.png" alt="Майор Гром: Чумной Доктор" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">Майор Гром: Чумной Доктор</h3>
+                    <p>История непобедимого питерского полицейского, столкнувшегося с загадочным преступником в маске Чумного Доктора, бросающего вызов всей системе.</p>
+                    <p class="movie-rating">★ ★ ★ ★ ★</p>
+                </div>
+		</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>и мнооогое другое :))</p>
+    </footer>
+</body>
+</html>
